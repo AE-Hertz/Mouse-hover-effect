@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+  font-weight:500 ;
+  -webkit-font-smoothing: antialiased;
+  padding: .6rem 1rem;
+  font-size: 1.2rem;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.get-in-touch {
+  background-color: #CBFE7E; 
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  color: #0E352E;
+  padding-right: 2rem;
+}
+
+button.get-in-touch:hover {
+  color: #ffffff !important;
+  transition-duration: 600ms;
+}
+
+button.get-in-touch img.button__image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 0.7rem;
+  z-index: 2; 
+}
+
+span {
+  z-index: 2; 
+  position: relative; 
+}
+
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background-color: #000000;
+  z-index: 1;
+}
+
+span.ripple-enter {
+  animation: ripple-enter 600ms ease-out forwards;
+}
+
+span.ripple-leave {
+  animation: ripple-leave 600ms ease-out forwards;
+}
+
+@keyframes ripple-enter {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ripple-leave {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 1;
+  }
+}
